@@ -1,0 +1,123 @@
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --shadow: rgba(79, 70, 229, 0.15);
+}
+
+body.dark {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --muted: #cbd5e1;
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --shadow: rgba(139, 92, 246, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #e0e7ff);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: min(90vw, 500px);
+}
+
+.card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px var(--shadow);
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 0.75rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.description {
+  margin-top: 1rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.3rem;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: var(--primary-dark);
+}
+
+button.secondary {
+  background: #10b981;
+}
+
+button.secondary:hover {
+  background: #059669;
+}
+
+.counter-box {
+  margin-top: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(79, 70, 229, 0.08);
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+}
+
+.label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+#counter {
+  font-size: 2rem;
+}
+
+.time {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
